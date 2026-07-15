@@ -1,0 +1,69 @@
+formulas:
+  Is this year?: file.name.contains(today().year.toString())
+  Ile_gier: file.backlinks.length
+properties:
+  formula.Ile_gier:
+    displayName: Count
+views:
+  - type: cards
+    name: Home links
+    filters:
+      and:
+        - file.tags.contains("category")
+    order:
+      - file.name
+    sort:
+      - property: file.path
+        direction: ASC
+    image: note.icon
+    cardSize: 90
+    imageAspectRatio: 1
+  - type: cards
+    name: Games
+    filters:
+      and:
+        - file.path.contains("4_Listy/43_Games/Gdzie mam/")
+    order:
+      - file.name
+      - formula.Ile_gier
+    image: note.icon
+    cardSize: 90
+  - type: table
+    name: Ostatnio edytowane
+    order:
+      - file.name
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 5
+  - type: cards
+    name: Kupione - czekam
+    filters:
+      and:
+        - file.tags.contains("kupione")
+    cardSize: 120
+    image: note.cover
+    imageAspectRatio: 1
+  - type: list
+    name: Podsumowania Roczne
+    filters:
+      and:
+        - file.tags.contains("year_summary")
+        - formula["Is this year?"] == true
+    order:
+      - file.name
+    markers: bullet
+  - type: cards
+    name: Tasks
+    filters:
+      and:
+        - file.folder.contains("7_Tasks/Projects")
+    order:
+      - file.name
+    sort:
+      - property: file.path
+        direction: ASC
+    image: note.icon
+    cardSize: 100
+    imageAspectRatio: 1

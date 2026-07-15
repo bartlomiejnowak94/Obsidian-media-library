@@ -1,0 +1,199 @@
+filters:
+  and:
+    - file.tags.contains("movie")
+formulas:
+  Last_edited: list(watched).map(number(value.toString().replace("[[","").replace("]]","").replace("-", "").slice(0,8))).sort()[-1].toString()
+  test: watched
+  Rating_stars: '"★".repeat(rating.floor()) + if((rating.ceil()*10 - rating*10) == 0, "", if((rating.ceil()*10 - rating*10) == 5, "½", ""))'
+  Rewatched?: if(watched.length > 1,"🔄️","")
+  Kino_year: file.tags.toString()
+views:
+  - type: cards
+    name: Ostatnio oglądane
+    filters:
+      and:
+        - "!rating.isEmpty()"
+    order:
+      - formula.Rating_stars
+      - formula.Rewatched?
+    sort:
+      - property: formula.Last_edited
+        direction: DESC
+    limit: 6
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: Backlog
+    filters:
+      and:
+        - file.tags.contains("backlog")
+    order: []
+    image: note.cover
+    cardSize: 100
+    imageAspectRatio: 1.5
+  - type: list
+    name: Diary
+    order:
+      - file.name
+      - watched
+  - type: cards
+    name: Paused
+    filters:
+      and:
+        - paused == true
+    order: []
+    cardSize: 90
+    imageAspectRatio: 1.5
+    image: note.cover
+  - type: cards
+    name: y2017
+    filters:
+      and:
+        - file.tags.contains("y2017")
+    order:
+      - formula.Rating_stars
+    sort:
+      - property: formula.Last_edited
+        direction: ASC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: y2018
+    filters:
+      and:
+        - file.tags.contains("y2018")
+    order:
+      - formula.Rating_stars
+    sort:
+      - property: formula.Last_edited
+        direction: ASC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: y2019
+    filters:
+      and:
+        - file.tags.contains("y2019")
+    order:
+      - formula.Rating_stars
+    sort:
+      - property: formula.Last_edited
+        direction: ASC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: y2020
+    filters:
+      and:
+        - file.tags.contains("y2020")
+    order:
+      - formula.Rating_stars
+    sort:
+      - property: formula.Last_edited
+        direction: ASC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: y2021
+    filters:
+      and:
+        - file.tags.contains("y2021")
+    order:
+      - formula.Rating_stars
+    sort:
+      - property: formula.Last_edited
+        direction: ASC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: y2022
+    filters:
+      and:
+        - file.tags.contains("y2022")
+    order:
+      - formula.Rating_stars
+    sort:
+      - property: formula.Last_edited
+        direction: ASC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: y2023
+    filters:
+      and:
+        - file.tags.contains("y2023")
+    order:
+      - formula.Rating_stars
+    sort:
+      - property: formula.Last_edited
+        direction: ASC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: y2024
+    filters:
+      and:
+        - file.tags.contains("y2024")
+    order: []
+    sort:
+      - property: formula.Last_edited
+        direction: ASC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: y2025
+    filters:
+      and:
+        - file.tags.contains("y2025")
+    order:
+      - formula.Rating_stars
+    sort:
+      - property: formula.Last_edited
+        direction: DESC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: cards
+    name: y2026
+    filters:
+      and:
+        - file.tags.contains("y2026")
+    order:
+      - formula.Rating_stars
+    sort:
+      - property: formula.Last_edited
+        direction: DESC
+    cardSize: 110
+    image: note.cover
+    imageAspectRatio: 1.5
+  - type: table
+    name: Test
+    filters:
+      and:
+        - file.tags.contains("y2025")
+    order:
+      - watched
+      - file.name
+    sort:
+      - property: watched
+        direction: ASC
+  - type: table
+    name: Kino
+    filters:
+      and:
+        - file.tags.toString().contains("/kino/")
+    groupBy:
+      property: file.tags
+      direction: ASC
+    order:
+      - file.name
+      - formula.Kino_year

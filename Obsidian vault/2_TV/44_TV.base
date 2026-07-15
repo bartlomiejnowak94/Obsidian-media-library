@@ -1,0 +1,44 @@
+filters:
+  and:
+    - file.tags.contains("tv")
+formulas:
+  progress: |-
+    html("<progress style='width:40%' max='" + 
+    note["odcinki"] + 
+    "' value='" + 
+    note["odcinek"] + 
+    "' ></progress>" + " " + (note["odcinek"]/note["odcinki"]*100).round() + "%"
+    )
+views:
+  - type: cards
+    name: Oglądam
+    filters:
+      and:
+        - current == true
+    order:
+      - file.name
+      - formula.progress
+    image: note.cover
+    cardSize: 90
+    imageAspectRatio: 1.5
+  - type: cards
+    name: Seriale
+    order:
+      - file.name
+      - odcinek
+      - odcinki
+      - tags
+    image: note.cover
+    cardSize: 90
+    imageAspectRatio: 1.5
+  - type: cards
+    name: Backlog
+    filters:
+      and:
+        - file.tags.contains("backlog")
+    order:
+      - file.name
+      - odcinki
+    cardSize: 90
+    imageAspectRatio: 1.5
+    image: note.cover
