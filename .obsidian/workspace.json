@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "ff9082dbe62dcf8e",
+    "id": "a272136d31992879",
     "type": "split",
     "children": [
       {
-        "id": "0880e4dd6a9e3a88",
+        "id": "95fa8d0b9ed022c1",
         "type": "tabs",
         "children": [
           {
-            "id": "e4fe6997dd8dc6a1",
+            "id": "c9554232a9dd35ab",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian vault/Home.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nowa karta"
+              "title": "Home"
             }
           }
         ]
@@ -23,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "11e0d39437a9e008",
+    "id": "3f121a6432d56eb1",
     "type": "split",
     "children": [
       {
-        "id": "48d0cfd1324a98e1",
+        "id": "61c3a12ccb6d22fb",
         "type": "tabs",
         "children": [
           {
-            "id": "37f596e0d9520d43",
+            "id": "cdb8f77677362672",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -46,7 +50,7 @@
             }
           },
           {
-            "id": "666b35da4b24d446",
+            "id": "fcfbce4a52d195c8",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -63,7 +67,7 @@
             }
           },
           {
-            "id": "99ee80ba41daaa9d",
+            "id": "51757195979c634a",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -82,19 +86,20 @@
     "width": 300
   },
   "right": {
-    "id": "ab3d8982b6645388",
+    "id": "1f78838cc57308ea",
     "type": "split",
     "children": [
       {
-        "id": "257660118161589b",
+        "id": "ef8b62f24ff833be",
         "type": "tabs",
         "children": [
           {
-            "id": "f37bce9be9b8054b",
+            "id": "fa9a25b02bad4868",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Obsidian vault/Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,11 +113,12 @@
             }
           },
           {
-            "id": "2922d69bf22d805a",
+            "id": "4bc1f45d468fccc7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Obsidian vault/Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -121,7 +127,7 @@
             }
           },
           {
-            "id": "f59bc3cbc105bb45",
+            "id": "7b3bcd83845af244",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -136,7 +142,7 @@
             }
           },
           {
-            "id": "c868036b3332c427",
+            "id": "b0e1e5f1cf03030d",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -150,11 +156,12 @@
             }
           },
           {
-            "id": "5a173bf3513ad1e2",
+            "id": "7819f0ed6eaf5f6d",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "Obsidian vault/Home.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -162,23 +169,13 @@
               "icon": "lucide-list",
               "title": "Konspekt"
             }
-          },
-          {
-            "id": "c47634a1d5efd71b",
-            "type": "leaf",
-            "state": {
-              "type": "file-properties",
-              "state": {},
-              "icon": "lucide-info",
-              "title": "Atrybuty"
-            }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 475.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -188,53 +185,9 @@
       "daily-notes:Otwórz dzisiejszy dziennik": false,
       "templates:Wstaw szablon": false,
       "command-palette:Otwórz listę poleceń": false,
-      "bases:Stwórz nową bazę danych": false,
-      "templater-obsidian:Templater": false
+      "bases:Stwórz nową bazę danych": false
     }
   },
-  "active": "e4fe6997dd8dc6a1",
-  "lastOpenFiles": [
-    "4_Templates/Templates/TMDB _query_API_tv.md",
-    "Home.md",
-    "Fallout S2 (2025).md",
-    "4_Templates/Templates/TMDB_query_API_movies.md",
-    "4_Templates/Templates",
-    "Fallout S1 (2024).md",
-    "4_Templates/icons/wyjazd_icon.png",
-    "4_Templates/icons/winyl_icon.png",
-    "4_Templates/icons/tv_icon.png",
-    "4_Templates/icons/steam_icon.png",
-    "4_Templates/icons/reminders_icon.png",
-    "4_Templates/icons/recuring_icon.png",
-    "4_Templates/icons/ps_icon.png",
-    "4_Templates/icons/pc_icon.png",
-    "4_Templates/icons/movie_icon.png",
-    "4_Templates/icons/home_icon.png",
-    "4_Templates/icons",
-    "3_Bases/0_Home.base",
-    "4_Templates",
-    "3_Bases",
-    "Nowy folder",
-    "1_Movies/Years/Movies 2026.md",
-    "1_Movies/Years",
-    "1_Movies/Nowy folder",
-    "1_Movies/Database/2026/Wildwood (2026).md",
-    "1_Movies/Database/2026/Untold UK Liverpool's Miracle of Istanbul (2026).md",
-    "1_Movies/Database/2026/The Sheep Detectives (2026).md",
-    "1_Movies/Database/2026/The Drama (2026).md",
-    "1_Movies/Database/2026/The Devil Wears Prada 2 (2026).md",
-    "1_Movies/Database/2026/Mortal Kombat II (2026).md",
-    "1_Movies/Database/2026/Project Hail Mary (2026).md",
-    "1_Movies/Database/2026/Masters of the Universe (2026).md",
-    "1_Movies/Database/2026/Finding Harry The Craft Behind the Magic (2026).md",
-    "1_Movies/Database/2026/Backrooms (2026).md",
-    "1_Movies/Database/2026",
-    "1_Movies/Database/2025/Światłoczuła (2025).md",
-    "1_Movies/Database/2025/Wake Up Dead Man (2025).md",
-    "1_Movies/Database/2025/Unknown Number The High School Catfish (2025).md",
-    "1_Movies/Database/2025/The Long Walk (2025).md",
-    "1_Movies/Database/2025/The Housemaid (2025).md",
-    "1_Movies/Database/2025/The Cobra and the Heart (2025).md",
-    "1_Movies/Database/2025"
-  ]
+  "active": "c9554232a9dd35ab",
+  "lastOpenFiles": []
 }
